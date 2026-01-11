@@ -26,3 +26,9 @@ target_link_libraries(wlgamma wayland-client)
 
 install(TARGETS wlgamma DESTINATION bin)
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/sys/share/" DESTINATION share)
+
+# https://blog.kotatsu.dev/posts/2024-04-10-nixpkgs-clangd-missing-headers/#another-workaround
+if(CMAKE_EXPORT_COMPILE_COMMANDS)
+  set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
+  set(CMAKE_C_STANDARD_INCLUDE_DIRECTORIES ${CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES})
+endif()
