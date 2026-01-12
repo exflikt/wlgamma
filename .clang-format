@@ -1,0 +1,16 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+SortIncludes:
+  Enabled: false
+  # IgnoreCase: false
+PointerAlignment: Left
+BreakBeforeBraces: Allman
+# NOTE: As of clang-format 22 this option is interpreted differently
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#alignafteropenbracket
+AlignAfterOpenBracket: BlockIndent
+IndentWidth: 4
+ColumnLimit: 0
+SpaceBeforeCaseColon: true
+...
+
